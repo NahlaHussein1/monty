@@ -1,12 +1,17 @@
 #include "monty.h"
 stack_t *head = NULL;
 
+
 /**
- * main - entry point
- * @argc: arguments count
- * @argv: list of arguments
- * Return: always 0
+ * main - the Entry Point
+ *
+ * @argc: Argus Count
+ *
+ * @argv: a List Of Argus
+ *
+ * Return: 0 always.
  */
+
 
 int main(int argc, char *argv[])
 {
@@ -20,11 +25,15 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+
 /**
- * create_node - Creates a node.
- * @n: Number to go inside the node.
- * Return: Upon sucess a pointer to the node. Otherwise NULL.
+ * create_node - node will be Created
+ *
+ * @n: No. To Go Inside Node
+ *
+ * Return: in case of Sucess the Pointer To Node. Null Otherwise
  */
+
 stack_t *create_node(int n)
 {
 	stack_t *node;
@@ -38,9 +47,11 @@ stack_t *create_node(int n)
 	return (node);
 }
 
+
 /**
- * free_nodes - Frees nodes in the stack.
+ * free_nodes - nodes will be Free In stack.
  */
+
 void free_nodes(void)
 {
 	stack_t *tmp;
@@ -57,11 +68,16 @@ void free_nodes(void)
 }
 
 
+
 /**
- * add_to_queue - Adds a node to the queue.
- * @new_node: Pointer to the new node.
- * @ln: line number of the opcode.
+ * add_to_queue - to adds Node To queue
+ *
+ * @new_node: Pointer To New Node
+ *
+ * @ln: Line No. Of opcode.
  */
+
+
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;

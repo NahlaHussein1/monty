@@ -1,11 +1,13 @@
-nclude "monty.h"
-
+#include "monty.h"
 
 /**
- * add_to_stack - Adds a node to the stack.
- * @new_node: Pointer to the new node.
- * @ln: Interger representing the line number of of the opcode.
+ * add_to_stack - to add Node To Stack
+ *
+ * @new_node: Pointer To New Node
+ *
+ * @ln: int Representing Line No. Of opcode.
  */
+
 void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
@@ -23,12 +25,14 @@ void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 	tmp->prev = head;
 }
 
-
 /**
- * print_stack - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: line number of  the opcode.
+ * print_stack - to add Node To Stack
+ *
+ * @stack: a Pointer To Pointer that Pointing To the Top Node Of Stack
+ *
+ * @line_number: Line No. Of opcode.
  */
+
 void print_stack(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
@@ -45,10 +49,13 @@ void print_stack(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pop_top - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * pop_top - to add Node To Stack
+ *
+ * @stack: a Pointer To Pointer that Pointing To the Top Node Of Stack
+ *
+ * @line_number: int Representing Line No. Of opcode.
  */
+
 void pop_top(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
@@ -63,11 +70,15 @@ void pop_top(stack_t **stack, unsigned int line_number)
 	free(tmp);
 }
 
+
 /**
- * print_top - Prints the top node of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * print_top - to Print Top Node Of Stack
+ *
+ * @stack: a Pointer To Pointer that Pointing To the Top Node Of Stack
+ *
+ * @line_number: int Representing Line No. Of opcode.
  */
+
 void print_top(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)

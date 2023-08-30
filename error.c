@@ -1,23 +1,32 @@
 #include "monty.h"
 
+
 /**
+ * err - to Prints the Appropiate Error Messages that Determined By Their Error Code
  *
- * err - Prints appropiate error messages determined by their error code.
- * @error_code: The error codes are the following:
- * (1) => The user does not give any file or more than one file to the program.
- * (2) => The file provided is not a file that can be opened or read.
- * (3) => The file provided contains an invalid instruction.
- * (4) => When the program is unable to malloc more memory.
- * (5) => When the parameter passed to the instruction "push" is not an int.
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
+ * @error_code: an Error Codes Are The following:
  *
+ * (1) => User Doesn't Give Any File Or More Than One File To The Program
+ *
+ * (2) => the Provided File Isn't File That Can Be Opened Or Read
+ *
+ * (3) => the Provided File Contains Invalid Instruction
+ *
+ * (4) => if The Program Unable To malloc More Memory
+ *
+ * (5) => if The Parameter Passed To Instruction "push" Isn't Int
+ *
+ * (6) => Stack is Empty For Print
+ *
+ * (7) => Stack is Empty For pop
+ *
+ * (8) => Stack Is Too Short For Operation.
  */
+
 void err(int error_code, ...)
 {
-	va_list ag;
 	char *op;
+	va_list ag;
 	int l_num;
 
 	va_start(ag, error_code);
@@ -48,20 +57,25 @@ void err(int error_code, ...)
 	exit(EXIT_FAILURE);
 }
 
+
 /**
+ * more_err - to Handles Errors
  *
- * more_err - handles errors.
- * @error_code: The error codes are the following:
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
- * (9) => Division by zero.
+ * @error_code: Error Codes Are The following:
  *
+ * (6) => Stack is Empty For Pint
+ *
+ * (7) => Stack is Empty For pop
+ *
+ * (8) => Stack is Too Short For Operation
+ *
+ * (9) => division By Zero
  */
+
 void more_err(int error_code, ...)
 {
-	va_list ag;
 	char *op;
+	va_list ag;
 	int l_num;
 
 	va_start(ag, error_code);
@@ -91,18 +105,21 @@ void more_err(int error_code, ...)
 	exit(EXIT_FAILURE);
 }
 
+
 /**
+ * string_err - to Handles Errors
  *
- * string_err - handles errors.
- * @error_code: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
- * (11) ~> The stack is empty.
+ * @error_code: Error Codes Are The following:
  *
+ * (10) ~> No. Inside Node Is Outside ASCII bounds
+ *
+ * (11) ~> Stack is Empty.
  */
+
 void string_err(int error_code, ...)
 {
-	va_list ag;
 	int l_num;
+	va_list ag;
 
 	va_start(ag, error_code);
 	l_num = va_arg(ag, int);
